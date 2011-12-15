@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, MainActivity!</string>
-    <string name="app_name">Apparca agent</string>
+    <string name="app_name">Apparca usuari</string>
     <string name="main">mainActivity</string>
     <string name="geoposition">geopositionActivity</string>
     <string name="payment">paymentActivity</string>
