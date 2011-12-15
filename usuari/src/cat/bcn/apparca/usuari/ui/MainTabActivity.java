@@ -9,17 +9,18 @@ import android.util.Log;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import cat.bcn.apparca.usuari.R;
-import cat.bcn.apparca.usuari.ui.utils.Constants;
+import cat.bcn.apparca.usuari.ui.util.Constants;
 
 public class MainTabActivity extends TabActivity {
-	
+
 	private final static String TAG = Constants.TAG;
-	private final static String CLASS_NAME = MainTabActivity.class.getSimpleName() + " :: ";
+	private final static String CLASS_NAME = MainTabActivity.class
+			.getSimpleName() + " :: ";
 
 	static private TabHost mTabHost;
 	private Resources mResources;
 	static private Activity startActivity = null;
-	
+
 	private int mPosition = 0;
 
 	/** Called when the activity is first created. */
@@ -30,37 +31,37 @@ public class MainTabActivity extends TabActivity {
 
 		Intent intent = getIntent();
 		Bundle extras = intent.getExtras();
-		if(extras!=null){
-			mPosition = extras.getInt(Constants.EXTRA_TAB_POSITION,0);
+		if (extras != null) {
+			mPosition = extras.getInt(Constants.EXTRA_TAB_POSITION, 0);
 		}
 		Log.d(TAG, CLASS_NAME + "mPosition: " + mPosition);
-		
+
 		setupViews();
 	}
-	
+
 	/**
 	 * Load view elements
 	 */
-	private void setupViews(){
+	private void setupViews() {
 		mTabHost = getTabHost();
 		mResources = getResources();
-		//addTabMain();
+		// addTabMain();
 		addTabProcess();
 		addTabProfile();
 		addTabInfo();
 		mTabHost.setCurrentTab(mPosition);
 	}
 
-	/*private void addTabMain() {
-		Intent intent = new Intent(Constants.INTENT_MAIN);
-		String title = mResources.getString(R.string.main);
-		TabSpec spec = mTabHost.newTabSpec(title);
-		spec.setIndicator(title,
-				mResources.getDrawable(android.R.drawable.ic_menu_agenda));
-		spec.setContent(intent);
-		mTabHost.addTab(spec);
-		
-	}*/
+	/*
+	 * private void addTabMain() { Intent intent = new
+	 * Intent(Constants.INTENT_MAIN); String title =
+	 * mResources.getString(R.string.main); TabSpec spec =
+	 * mTabHost.newTabSpec(title); spec.setIndicator(title,
+	 * mResources.getDrawable(android.R.drawable.ic_menu_agenda));
+	 * spec.setContent(intent); mTabHost.addTab(spec);
+	 * 
+	 * }
+	 */
 
 	private void addTabProcess() {
 		Intent intent = new Intent(Constants.INTENT_GEOPOSITION);
