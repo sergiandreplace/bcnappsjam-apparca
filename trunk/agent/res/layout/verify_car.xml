@@ -6,7 +6,7 @@
 	<RelativeLayout android:layout_width="fill_parent"
 		android:id="@+id/relativeLayout1" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_marginLeft="10dp" android:layout_marginTop="12dp">
 		<ImageView android:id="@+id/carPhoto" android:src="@drawable/picasso" android:layout_width="wrap_content" android:paddingTop="40dp" android:layout_height="280dp" android:scaleType="fitStart"></ImageView>
-		<TextView android:text="@string/ok" android:textSize="20sp" android:padding="10dp" android:layout_width="fill_parent" android:gravity="center_horizontal" android:textColor="#fff" android:textStyle="bold" android:layout_height="wrap_content" android:background="@drawable/wrongbox" android:id="@+id/wrongBox"></TextView>
+		<TextView android:textSize="20sp" android:padding="10dp" android:layout_width="fill_parent" android:gravity="center_horizontal" android:textColor="#fff" android:textStyle="bold" android:layout_height="wrap_content" android:background="@drawable/wrongbox" android:id="@+id/wrongBox" android:text="@string/wrong"></TextView>
 		<TextView android:textSize="20sp"
 			android:padding="10dp" android:gravity="center_horizontal"
 			android:layout_width="fill_parent" android:textColor="#fff"
