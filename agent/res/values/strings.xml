@@ -3,4 +3,6 @@
     <string name="hello">Hello World, MainActivity!</string>
     <string name="app_name">Apparca agent</string>
     <string name="check_car">Verificar vehicle</string>
+    <string name="SearchCar">Buscar vehícle</string>
+    <string name="NearCars">Vehícles al meu voltant</string>
 </resources>
