@@ -2,10 +2,15 @@ package cat.bcn.apparca.usuari.ui;
 
 import android.app.Activity;
 import android.app.TabActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import cat.bcn.apparca.usuari.Constants;
@@ -52,23 +57,11 @@ public class MainTabActivity extends TabActivity {
 		mTabHost.setCurrentTab(mPosition);
 	}
 
-	/*
-	 * private void addTabMain() { Intent intent = new
-	 * Intent(Constants.INTENT_MAIN); String title =
-	 * mResources.getString(R.string.main); TabSpec spec =
-	 * mTabHost.newTabSpec(title); spec.setIndicator(title,
-	 * mResources.getDrawable(android.R.drawable.ic_menu_agenda));
-	 * spec.setContent(intent); mTabHost.addTab(spec);
-	 * 
-	 * }
-	 */
-
 	private void addTabProcess() {
 		Intent intent = new Intent(Constants.INTENT_MAP_ACTIVITY);
 		String title = mResources.getString(R.string.geoposition);
 		TabSpec spec = mTabHost.newTabSpec(title);
-		spec.setIndicator(title,
-				mResources.getDrawable(android.R.drawable.ic_menu_agenda));
+		spec.setIndicator(createTabView(this, R.drawable.ico_car));
 		spec.setContent(intent);
 		mTabHost.addTab(spec);
 	}
@@ -77,8 +70,7 @@ public class MainTabActivity extends TabActivity {
 		Intent intent = new Intent(Constants.INTENT_PROFILE);
 		String title = mResources.getString(R.string.profile);
 		TabSpec spec = mTabHost.newTabSpec(title);
-		spec.setIndicator(title,
-				mResources.getDrawable(android.R.drawable.ic_menu_gallery));
+		spec.setIndicator(createTabView(this, R.drawable.ico_micuenta));
 		spec.setContent(intent);
 		mTabHost.addTab(spec);
 	}
@@ -87,9 +79,17 @@ public class MainTabActivity extends TabActivity {
 		Intent intent = new Intent(Constants.INTENT_INFO);
 		String title = mResources.getString(R.string.info);
 		TabSpec spec = mTabHost.newTabSpec(title);
-		spec.setIndicator(title,
-				mResources.getDrawable(android.R.drawable.ic_menu_agenda));
+		spec.setIndicator(createTabView(this, R.drawable.ico_info));
 		spec.setContent(intent);
 		mTabHost.addTab(spec);
+	}
+
+	private View createTabView(final Context context, final int resourceId) {
+		View view = LayoutInflater.from(context)
+				.inflate(R.layout.tabs_bg, null);
+		ImageView iv = (ImageView) view.findViewById(R.id.tab_icon);
+		Drawable drawable = mResources.getDrawable(resourceId);
+		iv.setImageDrawable(drawable);
+		return view;
 	}
 }
