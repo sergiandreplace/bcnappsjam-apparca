@@ -5,15 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import cat.bcn.apparca.usuari.Constants;
 import cat.bcn.apparca.usuari.R;
 
 public class MainActivity extends Activity {
 
-	private Button btStartProcess;
-	private Button btStartInfo;
-	private Button btStartProfile;
+	private LinearLayout btStartProcess;
+	private LinearLayout btStartInfo;
+	private LinearLayout btStartProfile;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -28,9 +28,9 @@ public class MainActivity extends Activity {
 	 * Load view elements
 	 */
 	private void setupViews() {
-		btStartProcess = (Button) findViewById(R.id.btStartProcess);
-		btStartInfo = (Button) findViewById(R.id.btStartInfo);
-		btStartProfile = (Button) findViewById(R.id.btStartProfile);
+		btStartProcess = (LinearLayout) findViewById(R.id.btStartProcess);
+		btStartInfo = (LinearLayout) findViewById(R.id.btStartInfo);
+		btStartProfile = (LinearLayout) findViewById(R.id.btStartProfile);
 		btStartProcess.setOnClickListener(startListener);
 		btStartInfo.setOnClickListener(infoListener);
 		btStartProfile.setOnClickListener(profileListener);
