@@ -4,5 +4,9 @@
     <string name="app_name">Apparca agent</string>
     <string name="check_car">Verificar vehicle</string>
     <string name="SearchCar">Buscar vehícle</string>
-    <string name="NearCars">Vehícles al meu voltant</string>
+    <string name="NearCars">Vehícles a prop</string>
+    <string name="brand">Marca</string>
+    <string name="model">Model</string>
+    <string name="color">Color</string>
+    <string name="ok">Correcte</string>
 </resources>
