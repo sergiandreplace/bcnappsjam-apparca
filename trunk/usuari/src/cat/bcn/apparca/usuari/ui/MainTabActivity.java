@@ -8,8 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
+import cat.bcn.apparca.usuari.Constants;
 import cat.bcn.apparca.usuari.R;
-import cat.bcn.apparca.usuari.ui.util.Constants;
 
 public class MainTabActivity extends TabActivity {
 
@@ -64,7 +64,7 @@ public class MainTabActivity extends TabActivity {
 	 */
 
 	private void addTabProcess() {
-		Intent intent = new Intent(Constants.INTENT_GEOPOSITION);
+		Intent intent = new Intent(Constants.INTENT_MAP_ACTIVITY);
 		String title = mResources.getString(R.string.geoposition);
 		TabSpec spec = mTabHost.newTabSpec(title);
 		spec.setIndicator(title,
