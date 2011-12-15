@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="vertical"
-  android:layout_width="fill_parent"
-  android:layout_height="fill_parent" android:background="@drawable/background">
-    <ImageView android:src="@drawable/picasso" android:layout_width="wrap_content" android:id="@+id/imageView1" android:layout_height="wrap_content" android:scaleType="centerInside"></ImageView>
-    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/background">
+    <ImageView android:layout_width="fill_parent" android:scaleType="fitCenter" android:id="@+id/imageView5" android:src="@drawable/header" android:layout_height="wrap_content"></ImageView>
+	<RelativeLayout android:layout_width="fill_parent"
+		android:id="@+id/relativeLayout1" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_marginLeft="10dp" android:layout_marginTop="12dp">
+		<ImageView android:id="@+id/carPhoto" android:src="@drawable/picasso" android:layout_width="wrap_content" android:paddingTop="40dp" android:layout_height="280dp" android:scaleType="fitStart"></ImageView>
+		<TextView android:text="@string/ok" android:textSize="20sp" android:padding="10dp" android:layout_width="fill_parent" android:gravity="center_horizontal" android:textColor="#fff" android:textStyle="bold" android:layout_height="wrap_content" android:background="@drawable/wrongbox" android:id="@+id/wrongBox"></TextView>
+		<TextView android:textSize="20sp"
+			android:padding="10dp" android:gravity="center_horizontal"
+			android:layout_width="fill_parent" android:textColor="#fff"
+			android:textStyle="bold" android:layout_height="wrap_content" android:background="@drawable/okbox" android:text="@string/ok" android:id="@+id/okBox"></TextView>
+	</RelativeLayout>
+	<TableLayout android:layout_width="fill_parent" android:id="@+id/tableLayout1"
+		android:layout_height="wrap_content">
+		<TableRow android:id="@+id/TableRow02" android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+			<TextView style="@style/label" android:layout_width="wrap_content"
+				android:id="@+id/TextView04" android:layout_height="wrap_content"
+				android:text="@string/brand"></TextView>
+			<TextView android:text="TextView" style="@style/textbox"
+				android:layout_weight="1" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/carBrand"></TextView>
+		</TableRow>
+		<TableRow android:id="@+id/TableRow01" android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+			<TextView style="@style/label" android:layout_width="wrap_content"
+				android:id="@+id/TextView02" android:layout_height="wrap_content"
+				android:text="@string/model"></TextView>
+			<TextView android:text="TextView" style="@style/textbox"
+				android:layout_weight="1" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/carModel"></TextView>
+		</TableRow>
+		<TableRow android:id="@+id/tableRow1" android:layout_height="wrap_content"
+			android:layout_width="fill_parent">
+			<TextView style="@style/label" android:layout_width="wrap_content"
+				android:id="@+id/textView1" android:layout_height="wrap_content"
+				android:text="@string/color"></TextView>
+			<TextView style="@style/textbox" android:text="TextView"
+				android:layout_height="wrap_content" android:layout_width="fill_parent"
+				android:layout_weight="1" android:id="@+id/carColor"></TextView>
+		</TableRow>
+	</TableLayout>
+
 </LinearLayout>

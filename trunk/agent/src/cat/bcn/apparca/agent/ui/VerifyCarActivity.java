@@ -1,25 +1,34 @@
 package cat.bcn.apparca.agent.ui;
 
-import cat.bcn.apparca.agent.R;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.Toast;
+import android.widget.ImageView;
+import android.widget.TextView;
+import cat.bcn.apparca.agent.R;
+import cat.bcn.apparca.agent.bean.Car;
+import cat.bcn.apparca.agent.data.CarsModel;
 
 public class VerifyCarActivity extends Activity {
 
-	private boolean isScanned = false;
+	public static final String CAR_ID = "Car_id";
+	private Car car;
+	private ImageView carPhoto;
+	private TextView carBrand;
+	private TextView carModel;
+	private TextView carColor;
+	private TextView wrongBox;
+	private TextView okBox;
 
-	/** Called when the activity is first created. */
+/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.verify_car);
 		findViews();
 		setListeners();
-		scanCode();
+		getData();
+		setData();
 
 	}
 
@@ -27,7 +36,12 @@ public class VerifyCarActivity extends Activity {
 	 * Setups all pointers to views
 	 */
 	private void findViews() {
-
+		carPhoto=(ImageView) findViewById(R.id.carPhoto);
+		carBrand=(TextView) findViewById(R.id.carBrand);
+		carModel=(TextView) findViewById(R.id.carModel);
+		carColor=(TextView) findViewById(R.id.carColor);
+		wrongBox=(TextView) findViewById(R.id.wrongBox);
+		okBox=(TextView) findViewById(R.id.okBox);
 	}
 
 	/***
@@ -37,25 +51,24 @@ public class VerifyCarActivity extends Activity {
 
 	}
 
-	public void onClick(View v) {
-		if (v.getId() == R.id.VerifyCar) {
 
+	private void getData() {
+		CarsModel carsModel=new CarsModel(this);
+		car=carsModel.getCar(Integer.parseInt(getIntent().getExtras().getString(CAR_ID)));
+	}
+	
+	private void setData() {
+		carPhoto.setImageDrawable(car.getPhoto());
+		carBrand.setText(car.getBrand());
+		carModel.setText(car.getModel());
+		carColor.setText(car.getColor());
+		if (car.getId()>1) {
+			wrongBox.setVisibility(View.VISIBLE);
+			okBox.setVisibility(View.GONE);
+		}else{
+			wrongBox.setVisibility(View.GONE);
+			okBox.setVisibility(View.VISIBLE);
 		}
 	}
-
-	public void scanCode() {
-		Intent intent = new Intent("com.google.zxing.client.android.SCAN");
-		startActivityForResult(intent, 0);
-	}
-
-	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-		// handle the scanned ID_car code
-		if (requestCode == 0) {
-			if (resultCode == RESULT_OK) {
-				String carId = intent.getStringExtra("SCAN_RESULT");
-				Toast.makeText(this, carId, Toast.LENGTH_LONG).show();
-
-			}
-		}
-	}
+	
 }

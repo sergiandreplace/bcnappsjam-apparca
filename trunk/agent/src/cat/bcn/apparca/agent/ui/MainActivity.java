@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 import cat.bcn.apparca.agent.R;
 /***
  * Main activity. Used as dashboard to access all options
@@ -42,8 +43,27 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	public void onClick(View v) {
 		if (v.getId()==R.id.VerifyCar) {
-			Intent verifyCarIntent=new Intent(this, VerifyCarActivity.class);
-			startActivity(verifyCarIntent);
+			scanCode();
+
 		}
+	}
+	
+	public void scanCode() {
+		Intent scanIntent = new Intent("com.google.zxing.client.android.SCAN");
+		startActivityForResult(scanIntent, 0);
+	}
+
+	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+		// handle the scanned ID_car code
+		
+			if (resultCode == RESULT_OK) {
+				String carId = intent.getStringExtra("SCAN_RESULT");
+				Intent verifyCarIntent=new Intent(this, VerifyCarActivity.class);
+				verifyCarIntent.putExtra(VerifyCarActivity.CAR_ID, carId);
+				startActivity(verifyCarIntent);
+			}
+		
+		
+		
 	}
 }
