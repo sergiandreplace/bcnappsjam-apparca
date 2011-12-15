@@ -26,15 +26,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.GeopositionActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="cat.bcn.apparca.usuari.ui.GeopositionActivity" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".ui.PaymentActivity"
             android:label="@string/app_name" >
             <intent-filter>
@@ -79,10 +70,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name=".ui.ApparcaMapActivity"
             android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="cat.bcn.apparca.usuari.ui.ApparcaMapActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         
         <service android:name="es.tempos21.T21LocationService.T21LocationService"></service>

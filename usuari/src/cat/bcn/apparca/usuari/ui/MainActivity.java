@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import cat.bcn.apparca.usuari.Constants;
 import cat.bcn.apparca.usuari.R;
-import cat.bcn.apparca.usuari.ui.util.Constants;
 
 public class MainActivity extends Activity {
 
