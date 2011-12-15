@@ -1,18 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="cat.bcn.apparca.usuari"
-      android:versionCode="1"
-      android:versionName="1.0">
+    package="cat.bcn.apparca.usuari"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
     <uses-sdk android:minSdkVersion="7" />
 
-    <application android:icon="@drawable/icon" android:label="@string/app_name">
-        <activity android:name=".ui.MainActivity"
-                  android:label="@string/app_name">
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.GeopositionActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="cat.bcn.apparca.usuari.ui.GeopositionActivity" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.PaymentActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="cat.bcn.apparca.usuari.ui.PaymentActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.TrackingActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="cat.bcn.apparca.usuari.ui.TrackingActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="cat.bcn.apparca.usuari.ui.ProfileActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.InfoActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="cat.bcn.apparca.usuari.ui.InfoActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MainTabActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="cat.bcn.apparca.usuari.ui.MainTabActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
+
 </manifest>
