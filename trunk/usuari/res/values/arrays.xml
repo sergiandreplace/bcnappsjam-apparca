@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="latitudes">
+        <item>41.402606</item>
+        <item>41.40315</item>
+        <item>41.401004</item>
+        <item>41.401391</item>
+        <item>41.403998</item>
+        <item>41.402807</item>
+        <item>41.400586</item>
+    </string-array>
+    
+    <string-array name="longitudes">
+        <item>2.192939</item>
+        <item>2.196249</item>
+        <item>2.196279</item>
+        <item>2.191322</item>
+        <item>2.192931</item>
+        <item>2.197716</item>
+        <item>2.192416</item>
+    </string-array>
+    
+    <string-array name="addresses">
+        <item>Calle de Tánger, 93–113</item>
+        <item>Calle de la Laguna, 100</item>
+        <item>Calle de Pedro IV, 122–146</item>
+        <item>Calle de Tánger, 66–74</item>
+        <item>Calle de Roc Boronat, 135–151</item>
+        <item>Calle de Pedro IV, 170–200</item>
+        <item>Calle de Sancho de Avila, 93</item>
+    </string-array>
+</resources>
