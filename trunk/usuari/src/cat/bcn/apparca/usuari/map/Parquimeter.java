@@ -8,7 +8,7 @@ import es.tempos21.android.mapslibrary.overlays.T21AOverlayItem;
 
 public class Parquimeter implements T21AOverlayItem {
 	
-	private final static int MAP_PIN = R.drawable.parking_icon;
+	private final static int MAP_PIN = R.drawable.map_pin;
 	
 	private double mLatitude;
 	private double mLongitude;

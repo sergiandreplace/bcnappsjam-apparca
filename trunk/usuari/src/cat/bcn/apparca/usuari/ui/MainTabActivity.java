@@ -58,7 +58,7 @@ public class MainTabActivity extends TabActivity {
 	}
 
 	private void addTabProcess() {
-		Intent intent = new Intent(Constants.INTENT_MAP_ACTIVITY);
+		Intent intent = new Intent(Constants.INTENT_PAY_ACTIVITY);
 		String title = mResources.getString(R.string.geoposition);
 		TabSpec spec = mTabHost.newTabSpec(title);
 		spec.setIndicator(createTabView(this, R.drawable.ico_car));

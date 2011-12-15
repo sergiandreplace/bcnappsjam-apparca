@@ -6,20 +6,14 @@
 
     <uses-sdk android:minSdkVersion="7" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-
     <application
-        android:debuggable="true"
-        android:icon="@drawable/icon"
-        android:label="@string/app_name" >
-        <uses-library android:name="com.google.android.maps" />
+        android:icon="@drawable/ico_apparca"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
 
 		<activity
             android:name=".ui.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoTitleBar" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,8 +22,7 @@
         </activity>
         <activity
             android:name=".ui.PaymentActivity"
-            android:label="@string/app_name" 
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="cat.bcn.apparca.usuari.ui.PaymentActivity" />
 
@@ -38,8 +31,7 @@
         </activity>
         <activity
             android:name=".ui.TrackingActivity"
-            android:label="@string/app_name" 
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="cat.bcn.apparca.usuari.ui.TrackingActivity" />
 
@@ -48,8 +40,7 @@
         </activity>
         <activity
             android:name=".ui.ProfileActivity"
-            android:label="@string/app_name" 
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="cat.bcn.apparca.usuari.ui.ProfileActivity" />
 
@@ -58,8 +49,7 @@
         </activity>
         <activity
             android:name=".ui.InfoActivity"
-            android:label="@string/app_name" 
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="cat.bcn.apparca.usuari.ui.InfoActivity" />
 
@@ -68,8 +58,7 @@
         </activity>
         <activity
             android:name=".ui.MainTabActivity"
-            android:label="@string/app_name" 
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="cat.bcn.apparca.usuari.ui.MainTabActivity" />
 
@@ -77,17 +66,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.ApparcaMapActivity"
-            android:label="@string/app_name" 
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:name=".ui.PayActivity"
+            android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="cat.bcn.apparca.usuari.ui.ApparcaMapActivity" />
+                <action android:name="cat.bcn.apparca.usuari.ui.PayActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         
-        <service android:name="es.tempos21.T21LocationService.T21LocationService"></service>
     </application>
 
 </manifest>

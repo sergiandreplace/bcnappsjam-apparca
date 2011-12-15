@@ -11,4 +11,5 @@
     <string name="btStartProcess">Aparcar</string>
     <string name="btInfo">Info</string>
     <string name="btProfile">Perfil</string>
+    <string name="str_near">Parquímetre a 50 metres</string>
 </resources>

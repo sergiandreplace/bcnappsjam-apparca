@@ -1,12 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/info"
-    />
-</LinearLayout>
+    android:background="@drawable/background"
+    android:padding="20dip" >
+
+    <TextView
+        android:id="@+id/title_timetable"
+        style="@style/titles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dip"
+        android:text="Horaris" />
+
+    <FrameLayout
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/title_timetable"
+        android:layout_marginTop="10dip"
+        android:background="#cccccc" >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/first_text"
+        style="@style/titles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/line"
+        android:layout_marginTop="20dip"
+        android:text="Dilluns - Divendres" />
+
+    <TextView
+        android:id="@+id/second_text"
+        style="@style/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/first_text"
+        android:text="08.00h - 14.00h" />
+
+    <TextView
+        android:id="@+id/third_text"
+        style="@style/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_text"
+        android:layout_marginLeft="20dip"
+        android:layout_toRightOf="@+id/second_text"
+        android:text="15.00h - 20.00h" />
+
+    <TextView
+        android:id="@+id/fourt_text"
+        style="@style/titles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/third_text"
+        android:text="Dissabte" />
+
+    <TextView
+        android:id="@+id/fifth_text"
+        style="@style/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/fourt_text"
+        android:text="08.00h - 14.00h" />
+
+    <TextView
+        android:id="@+id/sisth_text"
+        style="@style/titles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/fifth_text"
+        android:text="Diumenges i festius" />
+
+    <TextView
+        style="@style/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sisth_text"
+        android:text="Gratuït" />
+
+</RelativeLayout>
