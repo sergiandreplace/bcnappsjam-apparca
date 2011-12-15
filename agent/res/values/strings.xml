@@ -9,4 +9,5 @@
     <string name="model">Model</string>
     <string name="color">Color</string>
     <string name="ok">Correcte</string>
+    <string name="wrong">Incorrecte</string>
 </resources>
