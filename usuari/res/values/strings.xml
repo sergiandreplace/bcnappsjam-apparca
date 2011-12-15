@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello">Hello World, MainActivity!</string>
-    <string name="app_name">Apparca usuari</string>
+    <string name="app_name">Apparca agent</string>
+    <string name="main">mainActivity</string>
+    <string name="geoposition">geopositionActivity</string>
+    <string name="payment">paymentActivity</string>
+    <string name="tracking">trackingActivity</string>
+    <string name="info">infoActivity</string>
+    <string name="profile">orofileActivity</string>
+    <string name="btStartProcess">Aparcar</string>
+    <string name="btInfo">Info</string>
+    <string name="btProfile">Perfil</string>
 </resources>
